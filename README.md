@@ -1,7 +1,9 @@
 # promisified-command-executer-for-vs-code-
 > a wrapper class for vs code window.terminal that lets you await command executions using child process
 
-[Was created with the help of the vs code communit](https://github.com/microsoft/vscode-discussions/discussions/1091#discussioncomment-8730908), but will not be needed next month because of major update.
+[😻Created with help from the vs Code community😻](https://github.com/microsoft/vscode-discussions/discussions/1091#discussioncomment-8730908), but will not be needed starting next month due to a major update.
+
+.
  
 You can pass a single command, or an array of commands.
 
