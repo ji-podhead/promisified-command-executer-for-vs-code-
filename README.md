@@ -1,5 +1,5 @@
 # promisified-command-executer-for-vs-code-
-> a wrapper class for vs code window.terminal that lets you await command executions
+> a wrapper class for vs code window.terminal that lets you await command executions using child process
 
 [Was created with the help of the vs code communit](https://github.com/microsoft/vscode-discussions/discussions/1091#discussioncomment-8730908), but will not be needed next month because of major update.
  
