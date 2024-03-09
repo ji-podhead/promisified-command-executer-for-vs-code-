@@ -5,12 +5,10 @@ const vscode = require('vscode');
 
 // Promisify cp.spawn
 const spawn = util.promisify(cp.spawn);
-
 class CommandExecutor {
     constructor() {
         this.terminal = null;
     }
-
     initialize() {
         if (!this.terminal) {
             this.terminal = vscode.window.createTerminal({
@@ -20,14 +18,12 @@ class CommandExecutor {
             this.terminal.show();
         }
     }
-
     dispose() {
         if (this.terminal) {
             this.terminal.dispose();
             this.terminal = null;
         }
     }
-
     async runCommands(commands) {
         this.initialize();
         for (const command of commands) {
@@ -35,10 +31,8 @@ class CommandExecutor {
         }
         this.dispose();
     }
-
     async executeCommand(command) {
         this.terminal.sendText(command);
-
         return new Promise((resolve, reject) => {
             const child = cp.spawn('bash', ['-c', command], {
                 cwd: vscode.workspace.workspaceFolders[0].uri.fsPath
@@ -60,7 +54,6 @@ class CommandExecutor {
             child.on('error', (error) => {
                 reject(error);
             });
-
             child.on('exit', (code) => {
                 if (code === 0) {
                     resolve({ stdout, stderr });
@@ -71,4 +64,6 @@ class CommandExecutor {
         });
     }
 }
+// ... (rest of the CommandExecutor class code)
 
+module.exports = CommandExecutor;
