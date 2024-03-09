@@ -11,6 +11,7 @@
 # Run
 
 ```
+const CommandExecutor = require('./executer')
 const commandExecutor = new CommandExecutor();
 const commands = ['sleep 10','echo "Hello, World!"', 'sleep 2 && ls -la,'sleep 10','echo "Hello, World!"', 'sleep 2 && ls -la'];
 commandExecutor.runCommands(commands).then(() => {
