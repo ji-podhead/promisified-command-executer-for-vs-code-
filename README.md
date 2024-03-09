@@ -2,7 +2,7 @@
 > a wrapper class for vs code window.terminal that lets you await command executions using child process
 
 [😻Created with help from the vs Code community😻](https://github.com/microsoft/vscode-discussions/discussions/1091#discussioncomment-8730908)
-- will not be needed starting next month due to a major update
+- will not be needed starting next month due to a [major update](https://github.com/microsoft/vscode/issues/145234)
 - You can pass a single command, or an array of commands.
 
 > but as said above its  not interactive, colored etc and does feel a bit weird, but works at least for logging. <br>
