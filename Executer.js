@@ -72,11 +72,3 @@ class CommandExecutor {
     }
 }
 
-// Beispielverwendung
-const commandExecutor = new CommandExecutor();
-const commands = ['echo "Hello, World!"', 'sleep 2 && ls -la'];
-commandExecutor.runCommands(commands).then(() => {
-    console.log('All commands executed successfully.');
-}).catch(error => {
-    console.error('Error executing commands:', error);
-});
